@@ -1,0 +1,125 @@
+{
+  "policy_name": "Policy A",
+  "fields": {
+    "coverage_limits": {
+      "value": "Bodily Injury $00,000 each person; $00,000 each occurrence; Property Damage $00,000 each occurrence; Uninsured Motorists Insurance $00,000 each person; $00,000 each accident; Auto Collision Insurance Actual Cash Value; Auto Comprehensive Insurance Actual Cash Value; Rental Reimbursement Coverage up to $00 per day for a maximum of 00 days",
+      "status": "found",
+      "evidence": [
+        {
+          "doc_name": "allstate-auto-declarations-sample.pdf",
+          "page_start": 1,
+          "page_end": 2,
+          "text": "[PAGE 2]\nCOVERAGEFORVEHICLE#1\n2005 Compact Car\nCOVERAGE LIMITS DEDUCTIBLE PREMIUM\nBodilyInjury $00,000 eachperson\n$00,000 eachoccurrence\nPropertyDamage $00,000 eachoccurrence\nUninsuredMotoristsInsurance $00,000 eachperson\n(IncludesUnderinsured $00,000 eachaccident\nMotoristsProtection)"
+        },
+        {
+          "doc_name": "allstate-auto-declarations-sample.pdf",
+          "page_start": 1,
+          "page_end": 2,
+          "text": "[PAGE 2]\nCOVERAGEFORVEHICLE#1\n2005 Compact Car\nCOVERAGE LIMITS DEDUCTIBLE PREMIUM\nAutoCollisionInsurance ActualCashValue $000 $000.00\nAutoComprehensiveInsurance ActualCashValue $000 $00.00"
+        },
+        {
+          "doc_name": "allstate-auto-declarations-sample.pdf",
+          "page_start": 1,
+          "page_end": 2,
+          "text": "[PAGE 2]\nCOVERAGEFORVEHICLE#1\n2005 Compact Car\nCOVERAGE LIMITS DEDUCTIBLE PREMIUM\nRentalReimbursementCoverage upto$00perdayfor NotApplicable $00.00\namaximumof00days"
+        }
+      ]
+    },
+    "deductibles": {
+      "value": null,
+      "status": "missing",
+      "evidence": [
+        {
+          "doc_name": "allstate-auto-declarations-sample.pdf",
+          "page_start": 1,
+          "page_end": 2,
+          "text": "[PAGE 2]\nCOVERAGE LIMITS DEDUCTIBLE PREMIUM\nAutomobileLiabilityInsurance NotApplicable $000.00"
+        },
+        {
+          "doc_name": "allstate-auto-declarations-sample.pdf",
+          "page_start": 1,
+          "page_end": 2,
+          "text": "[PAGE 2]\nCOVERAGE LIMITS DEDUCTIBLE PREMIUM\nAutomobileMedicalPayments $0,000 eachperson NotApplicable $00.00"
+        },
+        {
+          "doc_name": "allstate-auto-declarations-sample.pdf",
+          "page_start": 1,
+          "page_end": 2,
+          "text": "[PAGE 2]\nCOVERAGE LIMITS DEDUCTIBLE PREMIUM\nAutoCollisionInsurance ActualCashValue $000 $000.00"
+        }
+      ]
+    },
+    "exclusions": {
+      "value": "Driver(s) excluded: Sample None",
+      "status": "found",
+      "evidence": [
+        {
+          "doc_name": "allstate-auto-declarations-sample.pdf",
+          "page_start": 1,
+          "page_end": 2,
+          "text": "[PAGE 1]\nDRIVER(S)LISTED DRIVER(S)EXCLUDED\nSample None"
+        },
+        {
+          "doc_name": "allstate-auto-declarations-sample.pdf",
+          "page_start": 1,
+          "page_end": 2,
+          "text": "[PAGE 1]\nUninsuredMotoristsInsurancelimitsofinsuredvehiclescannotbestackedoraggregated."
+        },
+        {
+          "doc_name": "allstate-auto-declarations-sample.pdf",
+          "page_start": 1,
+          "page_end": 2,
+          "text": "[PAGE 1]\nAutomobileMedicalPayments $0,000 eachperson NotApplicable $00.00"
+        }
+      ]
+    },
+    "claim_conditions": {
+      "value": "Requires prompt notice; cooperate with the insurer; provide documentation.",
+      "status": "inferred",
+      "evidence": [
+        {
+          "doc_name": "allstate-auto-declarations-sample.pdf",
+          "page_start": 1,
+          "page_end": 2,
+          "text": "[PAGE 1]\nYourtotalpremiumreflectsacombineddiscountof$000.00"
+        },
+        {
+          "doc_name": "allstate-auto-declarations-sample.pdf",
+          "page_start": 1,
+          "page_end": 2,
+          "text": "[PAGE 1]\nYourPolicyEffectiveDateisJan.1"
+        },
+        {
+          "doc_name": "allstate-auto-declarations-sample.pdf",
+          "page_start": 1,
+          "page_end": 2,
+          "text": "[PAGE 1]\nYourAgent: Sample A Sample (123)456-7890"
+        }
+      ]
+    },
+    "premium": {
+      "value": null,
+      "status": "missing",
+      "evidence": [
+        {
+          "doc_name": "allstate-auto-declarations-sample.pdf",
+          "page_start": 1,
+          "page_end": 2,
+          "text": "[PAGE 1]\nTotal Premium\nPremiumfor05Compact Car $000.00"
+        },
+        {
+          "doc_name": "allstate-auto-declarations-sample.pdf",
+          "page_start": 1,
+          "page_end": 2,
+          "text": "[PAGE 1]\nTOTAL $000.00"
+        },
+        {
+          "doc_name": "allstate-auto-declarations-sample.pdf",
+          "page_start": 1,
+          "page_end": 2,
+          "text": "[PAGE 1]\nYourtotalpremiumreflectsacombineddiscountof$000.00"
+        }
+      ]
+    }
+  }
+}

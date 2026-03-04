@@ -1,0 +1,83 @@
+{
+  "policy_name": "Policy B",
+  "fields": {
+    "coverage_limits": {
+      "value": "The Liability Coverage limit is shown in the “COVERAGES AND LIMITS” schedule on the Declarations; The limit for bodily injury is shown under “Bodily Injury Limit – Each Person, Each Accident”.",
+      "status": "found",
+      "evidence": [
+        {
+          "doc_name": "9835C.pdf",
+          "page_start": 8,
+          "page_end": 8,
+          "text": "The Liability Coverage limit is shown in the “COVERAGES AND LIMITS” schedule on the Declarations."
+        },
+        {
+          "doc_name": "9835C.pdf",
+          "page_start": 18,
+          "page_end": 18,
+          "text": "The limit for bodily injury is shown under “Bodily Injury Limit – Each Person, Each Accident”."
+        }
+      ]
+    },
+    "deductibles": {
+      "value": null,
+      "status": "missing",
+      "evidence": [
+        {
+          "doc_name": "9835C.pdf",
+          "page_start": 23,
+          "page_end": 23,
+          "text": "the lowest deductible dollar amount shown in the “POLICY PREMIUM” schedules on the Declarations."
+        }
+      ]
+    },
+    "exclusions": {
+      "value": "There is no coverage for: 1. An insured if that insured or their personal representative, without our written consent, settles with any person or organization who is or may be held legally liable for the bodily injury; 2. For damages arising out of and resulting from bodily injury to any insured while any insured is operating or occupying a motor vehicle owned by, furnished to, or available for the regular use of you or any resident relative if that motor vehicle is not a your car, a newly acquired car, or a temporary substitute car.",
+      "status": "found",
+      "evidence": [
+        {
+          "doc_name": "9835C.pdf",
+          "page_start": 19,
+          "page_end": 19,
+          "text": "THERE IS NO COVERAGE: 1. FOR AN INSURED IF THAT INSURED OR THEIR PERSONAL REPRESENTATIVE, WITHOUT OUR WRITTEN CONSENT, SETTLES WITH ANY PERSON OR ORGANIZATION WHO IS OR MAY BE HELD LEGALLY LIABLE FOR THE BODILY INJURY;"
+        },
+        {
+          "doc_name": "9835C.pdf",
+          "page_start": 19,
+          "page_end": 19,
+          "text": "2. FOR DAMAGES ARISING OUT OF AND RESULTING FROM BODILY INJURY TO ANY INSURED WHILE ANY INSURED IS OPERATING OR OCCUPYING A MOTOR VEHICLE OWNED BY, FURNISHED TO, OR AVAILABLE FOR THE REGULAR USE OF YOU OR ANY RESIDENT RELATIVE IF THAT MOTOR VEHICLE IS NOT A YOUR CAR, A NEWLY ACQUIRED CAR, OR A TEMPORARY SUBSTITUTE CAR."
+        }
+      ]
+    },
+    "claim_conditions": {
+      "value": "The insured must give notice of the accident or loss as soon as reasonably possible; provide details about the accident; submit proof of loss when required; and cooperate with the insurer in the investigation.",
+      "status": "inferred",
+      "evidence": [
+        {
+          "doc_name": "9835C.pdf",
+          "page_start": 31,
+          "page_end": 31,
+          "text": "The insured must give us or one of our agents notice of the accident or loss as soon as reasonably possible."
+        },
+        {
+          "doc_name": "9835C.pdf",
+          "page_start": 32,
+          "page_end": 32,
+          "text": "Any person or organization making claim under this policy must, when we require, give us proof of loss on forms we furnish."
+        }
+      ]
+    },
+    "premium": {
+      "value": null,
+      "status": "missing",
+      "evidence": [
+        {
+          "doc_name": "9835C.pdf",
+          "page_start": 22,
+          "page_end": 22,
+          "text": "The premium for this policy may vary based upon: the purchase of other products or services from the State Farm Companies."
+        }
+      ]
+    }
+  }
+}
