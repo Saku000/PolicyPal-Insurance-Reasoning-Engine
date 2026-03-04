@@ -7,65 +7,11 @@ It supports:
 - 📄 PDF policy ingestion
 - 🧩 Token-based chunking
 - 🧠 OpenAI embeddings
-- 🗂️ Chroma vector database indexing
+- 🗂️ Database indexing
 - 🔍 Source-grounded Q&A
-- 📊 Structured policy summary extraction
+- 📊 Structured policies comparison
 - 💬 Streamlit web interface
 
----
-
-## 🚀 Features
-
-### ✅ Step 1 - Upload PDF
-### ✅ Step 2 – PDF Parsing & Chunking
-- Extracts text using `pdfplumber`
-- Removes repeated headers & footers
-- Token-based chunking with overlap
-- Saves structured chunks to JSON
-
-### ✅ Step 3 – Embeddings & Vector Index
-- Uses OpenAI Embeddings API
-- Stores vectors in persistent Chroma DB
-- Supports similarity-based retrieval
-
-### ✅ Step 4 – RAG Question Answering
-- Retrieves top-k relevant chunks
-- Injects context into LLM
-- Enforces:
-  - Structured output format
-  - Coverage classification
-  - Source citation control
-  - Anti-hallucination safeguards
-
-### ✅ Step 5 – Intent Classification
-Classifies questions into:
-- Informational
-- Clarification
-- Scenario
-
-Each intent enforces a different answer structure.
-
-### ✅ Step 6 – Policy Summary Extraction
-Extracts structured insurance fields:
-
-- Coverage Parts
-- Limits
-- Deductibles / Cost Sharing
-- Premium Terms
-- Key Exclusions
-- Key Conditions
-
-Outputs:
-```
-storage/policy_summaries.json
-```
-
-### ✅ Step 7 – Streamlit UI
-Three-panel layout:
-
-| Left | Middle | Right |
-|------|--------|-------|
-| Pipeline controls | Policy dashboard | AI chat |
 
 ---
 
@@ -73,22 +19,32 @@ Three-panel layout:
 ```
 PolicyPal/
 │
-├── core.py # Main RAG engine
-├── app.py # Streamlit Q&A app
-├── app_dashboard.py # Policy summary dashboard
-├── step7_build_summary.py # Structured extraction
+├── app.py                     # Streamlit web interface for policy Q&A
+├── core.py                    # Core RAG reasoning engine
 │
-├── requirements.txt
-├── setup.bat # Create venv + install deps
-├── run.bat # Launch Streamlit
+├── compare_policies.py        # Compare coverage between two insurance policies
+├── prod_compare.py            # Production-level policy comparison logic
 │
-├── data/
-│ └── sample_policies/
+├── prod_index.py              # Build vector index from policy documents
+├── prod_retriever.py          # Retrieve relevant chunks from vector store
 │
-└── storage/
-  ├── uploads/
-  ├── chroma/
-  └── policy_summaries.json
+├── config.py                  # Global configuration (paths, model settings)
+├── policy_paths.py            # Policy file path utilities
+│
+├── requirements.txt           # Python dependencies
+├── setup.bat                  # Create virtual environment & install dependencies
+├── run.bat                    # Launch Streamlit application
+│
+├── data/                      # Insurance policy documents
+│   ├── policy_a/
+│   ├── policy_b/
+│   ├── qa_policies/
+│   └── sample_policies/
+│
+└── storage/                   # Generated artifacts and vector store
+    ├── compare_prod/
+    ├── qa_parsed_chunks.json
+    └── qa_vector_store.json
 ```
 
 
@@ -151,32 +107,6 @@ The system automatically corrects `Sources used:` indices to match actual retrie
 
 ---
 
-## 📊 Example Scenario Output
-```
-SUMMARY: If UM/UIM coverage is rejected on your Declarations Page, your policy will not pay for damage caused by an uninsured driver.
-
-Assumptions:
-
-Vehicle must be listed as covered auto
-
-Accident must fall within policy period
-
-Coverage overview:
-
-Bodily Injury Liability: Active
-
-Property Damage Liability: Active
-
-UM/UIM: Rejected
-
-Collision: Not listed on Declarations (not confirmed)
-
-Comprehensive: Not listed on Declarations (not confirmed)
-
-Sources used: [0, 1, 2]
-```
-
----
 
 ## 🛠️ Dependencies
 
@@ -187,17 +117,17 @@ requirements.txt
 
 Main libraries:
 - openai
-- chromadb
 - tiktoken
 - pdfplumber
 - streamlit
+- numpy
+- scipy
 
 ---
 
 ## 📌 Future Improvements
 
 - User authentication
-- Multi-policy comparison
 - Claims workflow assistant
 - Production logging
 - Cloud deployment (Streamlit Cloud / AWS)
