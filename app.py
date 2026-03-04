@@ -235,7 +235,7 @@ init_state()
 # =========================
 st.sidebar.title("Settings")
 st.sidebar.text_input(
-    "OpenAI API Key (optional)",
+    "OpenAI API Key",
     type="password",
     value=st.session_state.api_key,
     key="api_key",
